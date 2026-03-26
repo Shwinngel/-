@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>האתר של שווינגל</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  color: white;
+  padding: 50px;
+}
+input {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  width: 200px;
+  text-align: center;
+}
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  background: black;
+  color: white;
+  cursor: pointer;
+  margin-top: 10px;
+}
+#output {
+  margin-top: 20px;
+  font-size: 18px;
+}
+</style>
+</head>
+<body>
+
+<h1>האתר שלי 😎</h1>
+
+<input id="text" placeholder="תכתוב משהו כאן...">
+<br>
+<button onclick="addText()">הוסף</button>
+
+<div id="output"></div>
+
+<script>
+function addText() {
+  let text = document.getElementById("text").value;
+  if(text.trim() !== "") {
+    document.getElementById("output").innerHTML += "<p>" + text + "</p>";
+    document.getElementById("text").value = "";
+  }
+}
+</script>
+
+</body>
+</html>
